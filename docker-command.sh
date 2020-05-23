@@ -1,3 +1,4 @@
+
 #/E/SP/docker/mysql/data:/var/lib/mysql
   #--restart=always \
 
@@ -56,4 +57,7 @@ docker-compose -f docker-compose.yaml up -d
 # ssh to docker container 
 docker exec -it container_id/name sh <== cmd sh or bin/bash
 
+# nginx example
+docker run --name mynginx1 -P -d nginx
+docker run --name mynginx2 --rm --volume=/Volumes/MacData/docker-data/nginx-example:/usr/share/nginx/html -P -d nginx
 
